@@ -10,8 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var HelloLabel: UILabel!
+    @IBOutlet weak var SelectedDate: UIDatePicker!
+    @IBAction func buttonHello(_ sender: UIButton) {
+        let currentDate = SelectedDate.date
+        let myFormatter = DateFormatter()
+        myFormatter.dateFormat = "EEEE"
+        let thaiLocale = NSLocale(localeIdentifier:"TH_th")
+        myFormatter.locale = thaiLocale as Locale!
+        let currentDaateText = myFormatter.string(from:currentDate)
+        HelloLabel.text = currentDaateText
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        HelloLabel.text = ""
         // Do any additional setup after loading the view, typically from a nib.
     }
 
