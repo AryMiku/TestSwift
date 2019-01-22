@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        HelloLabel.text = ""
+        HelloLabel.text = "999"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
